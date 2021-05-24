@@ -1,0 +1,25 @@
+<meta charset = "utp-8">
+<script type="text/javascript">
+
+	var  answer = parseInt(Math.random()*100);
+	var  userAnser = +prompt("Введите число от 0 до 100");
+	var maxUserTry = 3;
+
+	for(var usertry = 1; usertry < maxUserTry; usertry++){
+		if(userAnser == answer){
+			alert("Congratulations! U win!");
+			break;
+			//continue; -сразу переходим к следующей итерации
+		}else if(userAnser<answer){
+			alert("Бери больше ");
+		}else if(userAnser>answer){
+			alert("Бери меньше ");
+		}
+		
+		userAnser = +prompt("Попробуйте еще раз!\n У вас осталось " + (maxUserTry-usertry) + " попыток");
+	}
+	if(usertry ==maxUserTry)
+		alert("Вы проиграли!");
+		
+	alert("Правильный ответ " + answer);
+</script>

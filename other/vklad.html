@@ -1,0 +1,33 @@
+<meta charset="uts-8">
+<script type="text/javascript">
+
+	var contribCount = +prompt("Введите сумму вклада");
+	var percOfContrib = +prompt("Введите процент по вкладу в формате 0.00");
+	//alert( isFinite(percOfContrib) );
+	var percByYear = (contribCount*(percOfContrib / 100));
+	 	//percOfContrib = parseInt(percOfContrib);
+	var yearCapitaliz = (contribCount + percByYear);
+	//r firstYearResult = (contribCount + yearCapitaliz);
+	let date = new Date();
+
+	document.write( (date.getFullYear()+1) + " год капитализация составит " + yearCapitaliz + "<br>");
+	
+		for(var i = 1; i<=4; i++){
+			var nextYearCapitaliz = (yearCapitaliz*(percOfContrib / 100));
+			var newSumm =( nextYearCapitaliz + yearCapitaliz );
+			document.write(((date.getFullYear()+1)+i) + " год капитализация составит " + (newSumm).toFixed(2) + "<br>");
+			yearCapitaliz = newSumm ;
+
+		}
+
+
+/*
+	for( var i = 1; i<=5; i++){
+		let date = new Date();
+		year1 = parseInt ( date.getFullYear() + i ); //+2 года к дате
+		//maonth1 = parseInt(date.getMonth());
+		document.write( (year1) + "<br>" );
+		//alert( date.getFullYear() + date.getMonth() );
+	}
+	*/
+</script>

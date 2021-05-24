@@ -1,0 +1,43 @@
+<meta charset = "utf-8">
+<script type="text/javascript">
+
+	function compareAnswer(userAnswer, answer){
+		if(userAnswer == answer){
+			alert("Все верно!");
+		} else {
+			alert("Мимо, правильный ответ " + answer );
+		}
+	}
+
+	function getRandomNumber(max){
+		/* var rand = Math.round(Math.random() * max);
+		   return rand; длинная форма записи строчки ниже */
+		return Math.round(Math.random() * max);
+	}
+
+	function generateRandomNumberArrey(length){
+		var arr = [];
+
+		for(var i = 0; i < length; i++){
+			var randomNumber = getRandomNumber(100);
+			arr.push(randomNumber);
+		}
+		return arr;
+	}
+
+	var numbers = generateRandomNumberArrey(5);
+	
+
+	alert("Запомните числа " + numbers);
+	var userAnswer = +prompt("Каким было первое число?");
+	compareAnswer(userAnswer, numbers[0])
+
+	userAnswer = +prompt("А последнее?");
+	compareAnswer(userAnswer, numbers[numbers.length - 1])
+
+
+	var n = getRandomNumber(numbers.length - 1);
+	userAnswer = +prompt("Угадай число номер " + (n+1) + "?");
+	compareAnswer(userAnswer, numbers[n])
+
+</script>

@@ -1,0 +1,51 @@
+<meta charset="ust-8">
+<script type="text/javascript">
+
+
+	function generateText(letters, length){
+		var text = "";
+		for(var i = 0; i < length; i++){
+			var n = getRandomNumber(letters.length - 1);
+			text = text + letters[n];
+		}
+
+		return text;
+	}
+
+	function getRandomNumber(max){
+		
+		return Math.round(Math.random() * max);
+	}
+
+	function compareText(text){
+		while(true){
+		
+		var userAnswer = prompt(text);
+		if(userAnswer == text){
+			alert("Все верно!");
+			break; //выводит из бесконечного цикла while если все успешно
+		} else {
+			alert("Вы ошиблись, поптробуйте снова!")
+		}
+    }
+	}
+
+	alert("Вас приветсвует программа по обучению слепой печати!");
+	alert("Положите 4 пальца левой руки - мезинец, безымянный, средний, указательный - на клавиши ф, ы, в, a. Запомните, что буква А находится под вашим указательным пальцем, а Ф - под мизинцем. \nТеперь неспеша набирайте текст и старайтесь не смотреть на клавиатуру. ");
+	var firstLevelText = generateText(["а", "ф"], 10); //генерирует текст из букв ф а , 10 символов
+	compareText(firstLevelText);
+	
+
+	alert("Поздравляю, выполни следующее задание!");
+    alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. \nЗапомните расположение пальцев. Повторяйте за мной");
+    var secondLevelText = generateText(["ы", "в"], 10); //генерирует текст из букв ф а , 10 символов
+	compareText(secondLevelText);
+
+	alert("Так держать! Выполни финальное задание!");
+    alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О. \nЗапомните расположение пальцев");
+    var thirdLevelText = generateText(["о", "ж"], 10); //генерирует текст из букв ф а , 10 символов
+	compareText(thirdLevelText);
+
+	alert("WINNER, WINNER, CHICKEN DINNER! ")
+
+</script>

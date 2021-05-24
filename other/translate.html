@@ -1,0 +1,42 @@
+<meta charset="ust-8">
+<script type="text/javascript">
+
+	function askForWords(words){ // какой то массив words
+		while(words.length !=0){ //пока количество элементов массива не равняется 0, пока элементы не кончатся
+			var i = parseInt(Math.random() * words.length); // сделать рандом целое число * длину массива words
+			var userTranslate  = prompt("Как переводится слово " + words[i][0]);
+			if (userTranslate == words[i][1] || userTranslate == words[i][2] ){
+				alert("Правильно!");
+				words.splice(i,1); // Удаляет элемент i удаляет 1 шт, если надо 2 пиши 2
+			} else {
+				alert("Правильный ответ " + words[i][1]);
+			}	
+
+		}
+
+	}
+
+
+	var easyWords = [
+		["food", "еда", "ЕДА"],
+		["apple", "яблоко"],
+		["dick", "член"],
+		["do", "делать"],
+		["bike", "велосипед"],
+	];
+
+	askForWords(easyWords);
+	
+		alert("Красава моя! NEXT LEVEL!!!")
+
+		var hardWords = [
+		["Zalupa", "залупа"],
+		["Cocoin", "коксик"],
+		["dick", "член"],
+		["pizda", "пизда"],
+		["SUKA", "сука"],
+	];
+
+	askForWords(hardWords);
+
+</script>

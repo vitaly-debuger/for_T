@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function compareText(userUnswer, arr){
+		if(userUnswer == arr[0] || userUnswer == arr[1] || userUnswer == arr[2]){
+			alert("Это правильный ответ!");
+			score++;
+		} else 
+		alert("Мимо, вы не угадали =( ");
+	}
+
+	var userUnswer = prompt("Зимой и летом одним цветом");
+	var score = 0;
+	userUnswer = userUnswer.toLowerCase();
+	var answerArr = ["елка", "елочка", "ель"];
+	compareText(userUnswer, answerArr);
+
+	var userUnswer = prompt("Летит, а не птица,\nВоет, а не зверь.");
+	userUnswer = userUnswer.toLowerCase();
+	answerArr = ["ветер", "вьюга", "ветерок"];
+	compareText(userUnswer, answerArr);
+
+
+	var userUnswer = prompt("Не зверь, не птица, носок как спица.\nЛетит - пищит, сядет - молчит.");
+	userUnswer = userUnswer.toLowerCase();
+	answerArr = ["комар", "комарик", "муха"];
+	compareText(userUnswer, answerArr);
+
+
+	alert("Вы дали " + score + " правильных ответов!")
+</script>	

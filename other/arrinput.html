@@ -1,0 +1,59 @@
+<meta charset =  "utf-8">
+<script type="text/javascript">
+
+	function getArr (n) {
+	var arr = [];
+	for(var i = 0; i < n; i++){
+		
+			arr.push(i + 1);
+		}
+		return arr;
+	}
+
+	function summArrey (myArray){
+    var summ = 0;
+    	for (var i = 0; i < myArray.length; i++) {
+        summ = (summ + myArray[i]);
+    	}
+    return summ;
+	}
+
+	function maxArrey (myArray){
+		var m = myArray[0];
+		//return Math.max.apply(null, myArray);
+		for (var i = 0; i < myArray.length; i++){
+			if(myArray[i] > m){
+				m = myArray[i];
+				} 
+			}
+		return m;
+	}
+
+function minArrey (myArray){
+		var m = myArray[0];
+		//return Math.max.apply(null, myArray);
+		for (var i = 0; i < myArray.length; i++){
+			if(myArray[i] < m){
+				m = myArray[i];
+				} 
+			}
+		return m;
+	}
+
+function evenFind (myArray){
+	var m = [];
+	for (var i = 0; i < myArray.length; i++){
+		if(myArray[i] % 2 == 0){
+			m.push(myArray[i]);
+		}
+	}
+	return m;
+}
+
+
+var a = getArr(5);
+var b = summArrey ([23, 34, 56, 67, 20]);
+var с = maxArrey ([23, 50, 2, 67, 20]);
+var d = minArrey ([23, 50, 2, 67, 20]);
+var f = evenFind ([23, 34, 56, 67, 20]);
+</script>
